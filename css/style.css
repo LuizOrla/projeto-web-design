@@ -97,7 +97,7 @@ section#sobre_biblioteca {
     border-radius: 8px;
 }
 
-section#nossos_livros {
+#nossos_livros {
     background-color: #254AB9;
     margin: 0;
     padding: 20px;
@@ -230,4 +230,126 @@ section#nossos_livros {
     flex: 1;
     
     font-size: large;
+}
+
+@media (max-width: 768px) {
+    .botao-ancora {
+        display: inline-block;
+        width: auto;
+        text-align: center;
+
+        background-color: rgb(9, 9, 105);
+        padding: 10px 15px;
+        border: 1px solid black;
+        
+        font-size: medium;
+        color: white;
+        text-decoration: none;
+    }
+
+    #texto-imagem-texto {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .imagem_meio, #texto_desc_1, #texto_desc_2 {
+        width: 90%;
+        padding: 0;
+    }
+
+    .fileira_imagens {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        
+        padding: 20px 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .fileira_imagens::-webkit-scrollbar {
+        height: 8px;
+    }
+    .fileira_imagens::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+    }
+
+    .imagem_fileira {
+        flex: 0 0 auto;            
+        
+        width: 250px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+
+        border: 4px solid #80EC89;
+        border-radius: 8px;
+        scroll-snap-align: start;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        
+        gap: 15px;
+        padding: 20px 15px;
+        justify-content: flex-start;
+    }
+
+    .cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card_livro {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+        width: auto;
+    }
+
+    .desc_unidade {
+        flex-direction: column; 
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    #imagem_unidade {
+        width: 90%;             
+        margin-bottom: 15px;
+    }
+
+    .titulo_unidade, 
+    .texto_unidade {
+        margin: 10px;
+        text-align: justify;
+        width: 90%;
+    }
+    
+    .titulo_unidade {
+        font-size: x-large;
+    }
+
+    .desc_contato {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem_contato {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .texto_contato {
+        margin: 0;
+        width: 90%;
+        text-align: center;
+    }
+
 }
