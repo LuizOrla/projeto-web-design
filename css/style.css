@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 
 html, body {
     margin: 0;
@@ -10,8 +13,8 @@ html, body {
 
 nav {
     height: auto;
-    width: 100vw;
-    background-color: rgb(39, 39, 175);
+    width: 100%;
+    background-color: #254AB9;
     display: flex;
     justify-content: flex-end;
 
@@ -32,27 +35,32 @@ nav {
 }
 
 .botao-ancora:hover {
-    background-color: gray; 
+    background-color: #351B65; 
 }
 
 img.imagem_grande {
-    width: 100vw;
-    aspect-ratio: 2 / 1;
+    width: 100%;
+    aspect-ratio: 3 / 1;
     object-fit: cover;
     overflow: hidden;
     margin: 0px;
     padding: 0px;
+    display: block;
 }
 
 section#sobre_biblioteca {
-    background-color: rgb(39, 39, 175);
+    background-color: #351B65;
+    color: lightgray;
+    border: 1px solid black;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     width: 100%;
 }
 
 .titulo_secao {
+    margin: 0px;
     padding: 10px;
+    font-size: xx-large;
 }
 
 #texto-imagem-texto {
@@ -62,15 +70,16 @@ section#sobre_biblioteca {
 }
 
 .imagem_meio {
-    width: 30vw;
+    width: 30%;
+    padding: 10px;
 }
 
 #texto_desc_1 {
-    width: 30vw;
+    width: 30%;
 }
 
 #texto_desc_2 {
-    width: 30vw;
+    width: 30%;
 }
 
 .fileira_imagens{
@@ -80,27 +89,145 @@ section#sobre_biblioteca {
 }
 
 .imagem_fileira {
-    width: 22vw;
+    width: 22%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 
-    border: 3px solid green;
+    border: 4px solid #80EC89;
     border-radius: 8px;
 }
 
-#nossos_livros {
-    background-color: blue;
+section#nossos_livros {
+    background-color: #254AB9;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
+
 .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    
+    gap: 5%;             
+    
+    padding: 40px;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.card_livro {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;    
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); 
+}
+
+.titulo_card {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    height: 2.6em;
     display: flex;
     align-items: center;
-    justify-content:space-around;
 }
-.card_livro {
-    width: 20vw;
-    aspect-ratio: 1 / 2;
 
-    background-color: gray;
+.img_card {
+    width: 130px;          
+    aspect-ratio: 2 / 3;   
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
 
+.texto_card {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.btn_card {
+    background-color: rgb(9, 9, 105);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;           
+    transition: background-color 0.2s;
+}
+
+.btn_card:hover {
+    background-color: rgb(39, 39, 175);
+}
+
+#unidades {
+    padding: 10px;
+    background-color: #351B65;
+    color: lightgrey;
+
+    align-items: center;
+    gap: 20px;
+}
+
+.desc_unidade {
     display: flex;
+    margin: 20px;
+}
+
+#imagem_unidade {
+    width: 30%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 4px solid #80EC89;
+}
+
+.titulo_unidade {
+    margin: 20px;
+    margin-left: 40px;
+    font-size: xx-large;
+}
+
+.texto_unidade {
+    flex: 1;
+    margin: 20px;
+    margin-left: 40px;
+    font-size: large;
+}
+
+#contatos {
+    padding: 20px;
+    background-color: #254AB9;
+}
+
+.desc_contato {
+    display: flex;
+}
+
+.imagem_contato {
+    width: 30%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 4px solid #80EC89;
+}
+
+.texto_contato {
+    margin: 30px;
+    flex: 1;
+    
+    font-size: large;
 }
